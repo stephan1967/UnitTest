@@ -10,9 +10,9 @@ namespace UnitTestProject1
 
         [DataRow(0, 0, 0)]
         [DataRow(3, 5, 8)]
-        [DataRow(2, 667751, 667753)]
+        [DataRow(2, 100, 102)]
         [DataTestMethod]
-        public void TestMethod1(int X, int Y, int z)
+        public void Add(int X, int Y, int z)
         {
 
             var calc = new Rekenmachine();
@@ -20,5 +20,32 @@ namespace UnitTestProject1
             Assert.AreEqual(z, totaal);
 
         }
+        
+        [DataRow(0, 0, 0)]
+        [DataRow(13, 7, 6)]
+        [DataRow(3000, 1400, 1600)]
+        [DataTestMethod]
+        public void Subtract(int X, int Y, int z)
+        {
+
+            var calc = new Rekenmachine();
+            totaal = calc.Aftrekken(X, Y);
+            Assert.AreEqual(z, totaal);
+
+        }
+
+        [DataRow(10, 2, 5)]
+        [DataRow(1400, 7, 200)]
+        [DataRow(3, 3, 1)]
+        [DataTestMethod]
+        public void Divide(int X, int Y, int z)
+        {
+
+            var calc = new Rekenmachine();
+            totaal = calc.Delen(X, Y);
+            Assert.AreEqual(z, totaal);
+
+        }
+
     }
 }

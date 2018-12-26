@@ -19,5 +19,25 @@ namespace UnitTestProject1
  
             return Som;
         }
+
+        /// <summary>Middels de methode Aftrekken kunnen we 2 getallen van elkaar aftrekken/// </summary>
+        /// 
+        public int Aftrekken(int A, int B)
+        {
+            int Verschil = A - B;
+            Debug.WriteLine(Verschil);
+
+            return Verschil;
+        }
+
+        /// <summary>Middels de methode Delen kunnen we 2 getallen door elkaar delen/// </summary>
+        /// 
+        public int Delen(int A, int B)
+        {
+            int Produkt = A / B;
+            Debug.WriteLine(Produkt);
+
+            return Produkt;
+        }
     }
 }
