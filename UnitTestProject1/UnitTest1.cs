@@ -1,4 +1,7 @@
 ﻿using System;
+using AventStack.ExtentReports;
+using AventStack.ExtentReports.Reporter;
+using AventStack.ExtentReports.Reporter.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestProject1
@@ -7,18 +10,17 @@ namespace UnitTestProject1
     public class UnitTest1
     {
         public int totaal { get; private set; }
-
+         
+      
         [DataRow(0, 0, 0)]
         [DataRow(3, 5, 8)]
         [DataRow(2, 100, 102)]
         [DataTestMethod]
         public void Add(int X, int Y, int z)
         {
-
             var calc = new Rekenmachine();
             totaal = calc.Optellen(X,Y);
             Assert.AreEqual(z, totaal);
-
         }
         
         [DataRow(0, 0, 0)]
@@ -27,11 +29,9 @@ namespace UnitTestProject1
         [DataTestMethod]
         public void Subtract(int X, int Y, int z)
         {
-
             var calc = new Rekenmachine();
             totaal = calc.Aftrekken(X, Y);
-            Assert.AreEqual(z, totaal);
-
+            Assert.AreEqual(z, totaal);        
         }
 
         [DataRow(10, 2, 5)]
@@ -40,12 +40,9 @@ namespace UnitTestProject1
         [DataTestMethod]
         public void Divide(int X, int Y, int z)
         {
-
             var calc = new Rekenmachine();
             totaal = calc.Delen(X, Y);
-            Assert.AreEqual(z, totaal);
-
+            Assert.AreEqual(z, totaal);   
         }
-
     }
 }

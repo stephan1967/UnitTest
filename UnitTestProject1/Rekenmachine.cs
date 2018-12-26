@@ -15,8 +15,6 @@ namespace UnitTestProject1
         public int Optellen(int A, int B)
         {
             int Som = A + B;
-            Debug.WriteLine(Som);
- 
             return Som;
         }
 
@@ -25,8 +23,6 @@ namespace UnitTestProject1
         public int Aftrekken(int A, int B)
         {
             int Verschil = A - B;
-            Debug.WriteLine(Verschil);
-
             return Verschil;
         }
 
@@ -35,8 +31,6 @@ namespace UnitTestProject1
         public int Delen(int A, int B)
         {
             int Produkt = A / B;
-            Debug.WriteLine(Produkt);
-
             return Produkt;
         }
     }
